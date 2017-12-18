@@ -6,7 +6,8 @@
   "dependencies": {
     "gatsby": "^1.9.135",
     "gatsby-link": "^1.6.32",
-    "gatsby-plugin-react-helmet": "^1.0.8"
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-stylus": "^1.1.13"
   },
   "keywords": [
     "gatsby"
@@ -18,7 +19,7 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "git-directory-deploy --directory public --branch gh-pages"
+    "deploy": "gatsby build --prefix-paths && git-directory-deploy --directory public --branch gh-pages"
   },
   "devDependencies": {
     "git-directory-deploy": "^1.5.1",
